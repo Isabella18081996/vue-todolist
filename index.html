@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - todolist</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    
+
+    <div id="root" class="container">
+
+        <div class="logo">
+            <img src="https://www.boolean.careers/images/misc/logo.png" alt="logo Boolean">
+        </div>
+
+        <div class="new-todo">
+            <h4 v-if="alertActive"><i class="fas fa-exclamation-triangle"></i> Attenzione: Testo troppo breve. Inserirne uno più lungo</h4>
+            <input v-model="strTodo" @keyup.enter="addTodo" type="text" placeholder="Nuovo todo">
+            <button @click="addTodo">Aggiungi alla lista</button>
+        </div>
+
+        <div class="todos-container">
+            <ul>
+                <li
+                    v-for="(todo, index) in todos"
+                    :class="(todo.checked) ? 'checked' : null"
+                    :style="(index === todos.length - 1) ? 'border:none' : null"
+                    @click="todo.checked = !todo.checked"
+                >
+                    {{todo.todo}}
+                    <i 
+                        @click.stop="removeTodo(index)"
+                       class="fas fa-times"></i>
+
+                </li>
+            </ul>
+        </div>
+
+    </div> <!-- end APP -->
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

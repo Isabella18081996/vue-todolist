@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
+body{
+    background: linear-gradient( #3b9ce6,#76d3bf);
+}
+
+.container{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+
+}
+
+.logo{
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 90px;
+}
+
+.logo img{
+    width: 350px;
+    
+}
+
+.new-todo{
+    text-align: center;
+}
+
+.new-todo input{
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 350px;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    outline: none;
+    margin-right: 20px;
+}
+
+.new-todo button{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    outline: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.new-todo button:hover{
+    opacity: 0.7;
+}
+
+.new-todo h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color:red;
+}
+
+.todos-container{
+    background-color: whitesmoke;
+    opacity: 0.5;
+    border-radius: 10px;
+    margin: 40px;
+    padding: 30px;
+}
+
+.todos-container ul{
+    list-style: none;
+}
+
+.todos-container ul li {
+    font-size: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #76e9fd;
+    cursor: pointer;
+    color: black;
+}
+
+.todos-container ul li:hover{
+    background-color: white;
+}
+
+.todos-container ul li i{
+    float: right;
+    color: black;
+    cursor: pointer;
+}
+
+.todos-container ul li i:hover{
+    color: red;
+    text-shadow:
+    0 0 2px rgba(202,228,225,0.92),
+    0 0 10px rgba(202,228,225,0.34),
+    0 0 4px rgba(242, 30, 30, 0.52),
+    0 0 7px rgba(242, 30, 30, 0.92),
+    0 0 11px rgba(242, 30, 30, 0.78),
+    0 0 16px rgba(242, 30, 30, 0.92);
+}
+
+
+
+.todos-container ul li.checked{
+    color: darkred;
+    text-decoration: line-through;
+
+  }
